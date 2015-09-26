@@ -34,14 +34,14 @@
 
 #pragma mark - Public Methods
 
-+ (void)action:(NSString* _Nullable)title
-       message:(NSString* _Nullable)message
++ (void)action:(NSString*)title
+       message:(NSString*)message
            tag:(NSInteger)tag
-   destructive:(NSArray* _Nullable)destructives
-       buttons:(NSArray* _Nullable)buttons
-    controller:(UIViewController* _Nullable)controller
+   destructive:(NSArray*)destructives
+       buttons:(NSArray*)buttons
+    controller:(UIViewController*)controller
       animated:(BOOL)animated
-    completion:(void (^ _Nullable)(NSInteger buttonIndex))completion;
+    completion:(void (^)(NSInteger buttonIndex))completion;
 {
     UIAlertController * _action = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
     _action.view.tag = tag;
